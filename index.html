@@ -37,10 +37,39 @@
       padding: 0;
     }
 
+    nav ul li {
+      position: relative;
+    }
+
     nav ul li a {
       text-decoration: none;
       color: #1e293b;
       font-weight: 600;
+    }
+
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      padding: 0.5rem 0;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+
+    nav ul li ul li a {
+      color: #1e293b;
+      font-weight: 400;
     }
 
     .banner {
@@ -82,7 +111,14 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="#">Why Us</a></li>
-      <li><a href="courses.html">Courses</a></li>
+      <li>
+        <a href="courses.html">Courses</a>
+        <ul>
+          <li><a href="#">Big Data</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">Spark</a></li>
+        </ul>
+      </li>
       <li><a href="#">Enroll Now</a></li>
     </ul>
   </nav>
