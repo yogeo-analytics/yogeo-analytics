@@ -26,12 +26,12 @@
     }
 
     nav img {
-      height: 40px;
+      height: 50px;
     }
 
     nav ul {
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -47,87 +47,82 @@
       font-weight: 600;
     }
 
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 2rem;
+      left: 0;
+      background-color: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      list-style: none;
+      padding: 0.5rem 0;
+    }
+
+    nav ul li:hover ul {
+      display: block;
+    }
+
+    nav ul li ul li {
+      padding: 0.5rem 1rem;
+      white-space: nowrap;
+    }
+
+    nav ul li ul li a {
+      color: #1e293b;
+      font-weight: 400;
+    }
+
     .banner {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
       text-align: center;
-      height: 85vh;
-      background-image: url('tech_bg.jpg.png'); /* ✅ Your GitHub image */
+      height: 100vh;
+      background-image: url('A_digital_image_displays_an_abstract_digital_backg.png');
       background-size: cover;
       background-position: center;
-      padding: 2rem;
+      padding: 3rem;
       color: white;
     }
 
-    .banner h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin-bottom: 1rem;
-      text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
+    .sub-heading {
+      font-size: 2rem;
+      font-weight: 500;
+      margin-top: 2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
-    .search-bar {
+    .description {
+      font-size: 1.2rem;
+      max-width: 800px;
       margin-top: 1rem;
-    }
-
-    .search-bar input[type="text"] {
-      padding: 0.5rem;
-      width: 240px;
-      border: none;
-      border-radius: 5px 0 0 5px;
-      font-size: 0.95rem;
-    }
-
-    .search-bar button {
-      padding: 0.5rem 1rem;
-      border: none;
-      background-color: #2563eb;
-      color: white;
-      border-radius: 0 5px 5px 0;
-      cursor: pointer;
-    }
-
-    @media (max-width: 600px) {
-      nav {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      nav ul {
-        flex-direction: column;
-        gap: 0.75rem;
-      }
-
-      .banner h1 {
-        font-size: 1.8rem;
-      }
-
-      .search-bar input[type="text"] {
-        width: 180px;
-      }
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
   </style>
 </head>
 <body>
   <nav>
-    <img src="logo.png" alt="Yogeo Analytics Logo" />
+    <img src="logo.png" alt="Yogeo Analytics Logo">
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
       <li><a href="#">Why Us</a></li>
-      <li><a href="courses.html">Courses</a></li>
-      <li><a href="#">Enroll Us</a></li>
+      <li>
+        <a href="courses.html">Courses</a>
+        <ul>
+          <li><a href="#">Big Data</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">Spark</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Enroll Now</a></li>
     </ul>
   </nav>
 
   <section class="banner">
-    <h1>Yogeo Analytics</h1>
-    <div class="search-bar">
-      <input type="text" placeholder="Finish your course Search here..." />
-      <button>🔍</button>
-    </div>
+    <div class="sub-heading">Get Experienced on BigData Hadoop</div>
+    <div class="description">Learn from Experts and Achieve your career goals with industry-recognized learning paths</div>
   </section>
 </body>
 </html>
