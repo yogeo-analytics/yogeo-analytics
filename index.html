@@ -40,45 +40,34 @@
       padding: 0;
     }
 
+    nav ul li {
+      position: relative;
+    }
+
     nav ul li a {
       color: #f1f5f9;
       text-decoration: none;
       font-weight: bold;
     }
 
-    section.hero {
-      position: relative;
-      height: 100vh;
-      background: url('banner.jpg') no-repeat center center/cover;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: white;
+    nav ul li ul {
+      display: none;
+      position: absolute;
+      top: 2.5rem;
+      left: 0;
+      background-color: #1e293b;
+      list-style: none;
+      padding: 0.5rem 1rem;
+      border-radius: 0.25rem;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
     }
 
-    section.hero h1 {
-      font-size: 3rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 4px #000;
+    nav ul li:hover ul {
+      display: block;
     }
 
-    .hero input[type="text"] {
-      padding: 1rem;
-      width: 300px;
-      border: none;
-      border-radius: 5px;
-      margin-top: 2rem;
-    }
-
-    .hero button {
-      padding: 1rem 1.5rem;
-      margin-left: -4px;
-      border: none;
-      background-color: #2563eb;
-      color: white;
-      font-weight: bold;
-      border-radius: 0 5px 5px 0;
+    nav ul li ul li {
+      margin: 0.5rem 0;
     }
 
     .courses-section {
@@ -125,19 +114,18 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About</a></li>
-      <li><a href="courses.html">Courses</a></li>
+      <li>
+        <a href="courses.html">Courses</a>
+        <ul>
+          <li><a href="#">Big Data</a></li>
+          <li><a href="#">Python</a></li>
+          <li><a href="#">Spark</a></li>
+        </ul>
+      </li>
       <li><a href="contact.html">Contact</a></li>
       <li><a href="more.html">More</a></li>
     </ul>
   </nav>
-
-  <section class="hero">
-    <h1>WELCOME TO YOGEO ANALYTICS</h1>
-    <div>
-      <input type="text" placeholder="Finish your course Search here..." />
-      <button>🔍</button>
-    </div>
-  </section>
 
   <section class="courses-section">
     <h1>Our Courses</h1>
