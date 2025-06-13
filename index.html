@@ -25,8 +25,20 @@
       z-index: 999;
     }
 
-    nav img {
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .logo-container img {
       height: 50px;
+    }
+
+    .logo-text {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #1e293b;
     }
 
     nav ul {
@@ -87,14 +99,14 @@
     }
 
     .sub-heading {
-      font-size: 2rem;
+      font-size: 3rem;
       font-weight: 500;
       margin-top: 2rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     .description {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       max-width: 800px;
       margin-top: 1rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
@@ -103,7 +115,10 @@
 </head>
 <body>
   <nav>
-    <img src="logo.png" alt="Yogeo Analytics Logo">
+    <div class="logo-container">
+      <img src="logo.png" alt="Yogeo Analytics Logo">
+      <div class="logo-text">Yogeo Analytics</div>
+    </div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
