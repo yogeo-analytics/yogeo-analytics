@@ -3,98 +3,138 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Courses - Yogeo Analytics</title>
+  <title>Yogeo Analytics</title>
   <style>
     body {
       margin: 0;
       font-family: system-ui, sans-serif;
       background-color: #0f172a;
       color: #f1f5f9;
-      text-align: center;
-      padding: 0;
     }
+
     nav {
       background-color: #1e293b;
-      padding: 1rem;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
     }
+
+    nav .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    nav img {
+      height: 40px;
+      margin-right: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      margin-right: 1.5rem;
+    }
+
     nav a {
-      color: #f1f5f9;
+      color: #ffffff;
       text-decoration: none;
-      margin: 0 1rem;
-      font-weight: bold;
+      font-weight: 500;
     }
+
     nav a:hover {
-      color: #38bdf8;
+      text-decoration: underline;
     }
-    .container {
-      padding: 2rem;
+
+    .main {
+      text-align: center;
+      padding: 4rem 2rem;
     }
-    h1 {
+
+    .main img {
+      width: 120px;
       margin-bottom: 1rem;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 2rem;
-      max-width: 900px;
-      margin: auto;
+
+    .main h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
-    .card {
-      background-color: #1e293b;
-      border-radius: 8px;
-      padding: 1rem;
-      color: #f8fafc;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+
+    .main p {
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.5;
+      font-size: 1rem;
+      color: #cbd5e1;
     }
-    .card img {
-      width: 80px;
-      height: auto;
-      margin-bottom: 0.5rem;
+
+    .btn {
+      display: inline-block;
+      margin-top: 2rem;
+      background-color: #0ea5e9;
+      color: #fff;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border: none;
+      border-radius: 0.3rem;
+      text-decoration: none;
     }
-    .card p {
-      margin: 0;
-      font-weight: 500;
+
+    .btn:hover {
+      background-color: #0284c7;
+    }
+
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      nav ul {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+      }
+      nav li {
+        margin: 0;
+      }
+      .main h1 {
+        font-size: 1.5rem;
+      }
     }
   </style>
 </head>
 <body>
 
   <nav>
-    <a href="index.html">Home</a>
-    <a href="courses.html">Courses</a>
-    <a href="contact.html">Contact</a>
-    <a href="more.html">More</a>
-    <a href="about.html">About Us</a>
+    <div class="logo">
+      <a href="index.html">
+        <img src="logo.png" alt="Yogeo Analytics Logo" />
+      </a>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="more.html">More</a></li>
+    </ul>
   </nav>
 
-  <div class="container">
-    <h1>Featured Courses</h1>
-    <div class="grid">
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/f/ff/Apache_Spark_logo.svg" alt="Spark">
-        <p>Apache Spark</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0e/Hadoop_logo.svg" alt="Hadoop">
-        <p>Hadoop</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/Kafka_logo.svg" alt="Kafka">
-        <p>Kafka</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3f/Apache_Hive_logo.svg" alt="Hive">
-        <p>Apache Hive</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Nifi-logo.svg" alt="NiFi">
-        <p>Apache NiFi</p>
-      </div>
-      <div class="card">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/1/10/Apache_HBase_logo.svg" alt="HBase">
-        <p>Apache HBase</p>
-      </div>
-    </div>
+  <div class="main">
+    <img src="logo.png" alt="Yogeo Analytics Logo" />
+    <h1>Yogeo Analytics</h1>
+    <p>
+      Yogeo Analytics is a premium online training platform offering industry-ready courses in Big Data,
+      Cloud Technologies, and Data Engineering. Trusted by learners across domains.
+    </p>
+    <a href="about.html" class="btn">About Us</a>
   </div>
 
 </body>
