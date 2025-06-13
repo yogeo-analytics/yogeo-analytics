@@ -3,146 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Courses - Yogeo Analytics</title>
+  <title>Yogeo Analytics</title>
   <style>
     body {
       margin: 0;
-      font-family: system-ui, sans-serif;
-      background-color: #0f172a;
-      color: #f1f5f9;
-      padding-top: 100px;
-      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #1e293b;
     }
 
     nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #1e293b;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.5rem 2rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      background-color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      top: 0;
+      width: 100%;
       z-index: 999;
     }
 
     nav img {
-      height: 100px;
-      margin-right: 1rem;
+      height: 50px;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
+      list-style: none;
       margin: 0;
       padding: 0;
     }
 
-    nav ul li {
-      position: relative;
-    }
-
     nav ul li a {
-      color: #f1f5f9;
       text-decoration: none;
-      font-weight: bold;
+      color: #1e293b;
+      font-weight: 600;
     }
 
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 2.5rem;
-      left: 0;
-      background-color: #1e293b;
-      list-style: none;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
-    }
-
-    nav ul li:hover ul {
-      display: block;
-    }
-
-    nav ul li ul li {
-      margin: 0.5rem 0;
-    }
-
-    .courses-section {
-      padding: 4rem 2rem;
-      background-color: #0f172a;
-    }
-
-    .courses-section h1 {
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .course-grid {
+    .banner {
       display: flex;
+      flex-direction: column;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .course-card {
-      background-color: #1e293b;
+      align-items: center;
+      text-align: center;
+      height: 100vh;
+      background-image: url('banner.jpg');
+      background-size: cover;
+      background-position: center;
       padding: 2rem;
-      border-radius: 0.5rem;
-      width: 300px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+      color: white;
     }
 
-    .course-card h2 {
-      color: #ffffff;
+    .banner h1 {
+      font-size: 3rem;
+      font-weight: 700;
       margin-bottom: 1rem;
     }
 
-    .course-card p {
-      color: #cbd5e1;
-      font-size: 0.95rem;
+    .banner h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .banner p {
+      font-size: 1.1rem;
+      max-width: 700px;
+      line-height: 1.6;
     }
   </style>
 </head>
 <body>
   <nav>
-    <a href="index.html">
-      <img src="logo.png" alt="Yogeo Analytics Logo" />
-    </a>
+    <img src="logo.png" alt="Yogeo Analytics Logo">
     <ul>
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li>
-        <a href="courses.html">Courses</a>
-        <ul>
-          <li><a href="#">Big Data</a></li>
-          <li><a href="#">Python</a></li>
-          <li><a href="#">Spark</a></li>
-        </ul>
-      </li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="more.html">More</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="#">Why Us</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="#">Enroll Now</a></li>
     </ul>
   </nav>
 
-  <section class="courses-section">
-    <h1>Our Courses</h1>
-    <div class="course-grid">
-      <div class="course-card">
-        <h2>Big Data</h2>
-        <p>Master Hadoop, HDFS, Hive, and ecosystem tools with hands-on training.</p>
-      </div>
-      <div class="course-card">
-        <h2>Python</h2>
-        <p>Foundational Python for data manipulation, scripting, and automation tasks.</p>
-      </div>
-      <div class="course-card">
-        <h2>Spark</h2>
-        <p>Build real-time and batch analytics pipelines using Apache Spark and PySpark.</p>
-      </div>
-    </div>
+  <section class="banner">
+    <h1>Yogeo Analytics</h1>
+    <h2>Get Experienced on BigData Hadoop</h2>
+    <p>Learn from Experts and Achieve your career goals with industry-recognized learning paths</p>
   </section>
 </body>
 </html>
