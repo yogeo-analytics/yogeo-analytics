@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yogeo Analytics</title>
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -17,39 +13,38 @@
     }
 
     nav {
-      background-color: white;
-      color: #1e293b;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0.8rem 2rem;
+      background-color: white;
+      padding: 1rem 2rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
       width: 100%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
+      z-index: 999;
     }
 
     .logo-container {
       display: flex;
       align-items: center;
-      gap: 0.6rem;
+      gap: 0.5rem;
     }
 
     .logo-container img {
-      height: 38px;
+      height: 50px;
     }
 
     .logo-text {
-      font-size: 1.2rem;
-      font-weight: bold;
+      font-size: 1rem;
+      font-weight: 600;
       color: #1e293b;
     }
 
     nav ul {
-      list-style: none;
       display: flex;
-      gap: 1.5rem;
+      gap: 2rem;
+      list-style: none;
       margin: 0;
       padding: 0;
     }
@@ -62,60 +57,67 @@
 
     section {
       padding: 6rem 2rem 4rem;
-      max-width: 1200px;
+      max-width: 1100px;
       margin: auto;
     }
 
     .hero {
-      background: url('your-final-backdrop.png') no-repeat center center/cover;
-      height: 100vh;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: center;
-      color: white;
       text-align: center;
-      padding: 0 1rem;
+      height: 100vh;
+      background-image: url('your-final-backdrop.png');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 3rem;
     }
 
-    .hero h1 {
-      font-size: 3.5rem;
-      margin: 0;
-      text-shadow: 2px 2px 4px #000;
+    .sub-heading {
+      font-size: 3.2rem;
+      font-weight: 600;
+      margin-top: 2rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
-    .hero p {
-      font-size: 1.5rem;
-      max-width: 700px;
+    .description {
+      font-size: 1.8rem;
+      max-width: 800px;
       margin-top: 1rem;
-      text-shadow: 1px 1px 2px #000;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     h2 {
       color: #3b82f6;
-      text-align: center;
       font-size: 2rem;
-      margin-bottom: 2rem;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .why-us ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .why-us ul li::before {
+      content: "\2713";
+      color: #3b82f6;
+      margin-right: 10px;
     }
 
     .courses-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 2rem;
     }
 
     .course-card {
       background-color: #13293d;
+      padding: 1.5rem;
       border-radius: 10px;
-      padding: 2rem 1.5rem;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    }
-
-    .course-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
     }
 
     .course-card img {
@@ -125,21 +127,42 @@
       margin-bottom: 1rem;
     }
 
-    .course-card h3 {
+    .contact {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1 1 300px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 0.75rem;
       margin: 0.5rem 0;
-      font-size: 1.15rem;
-      color: #f1f5f9;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .contact-form button {
+      background-color: #3b82f6;
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <nav>
     <div class="logo-container">
-      <img src="logo.png" alt="Logo">
+      <img src="logo.png" alt="Yogeo Analytics Logo">
       <div class="logo-text">Yogeo Analytics</div>
     </div>
     <ul>
-      <li><a href="#home">Home</a></li>
+      <li><a href="#hero">Home</a></li>
       <li><a href="#about">About Us</a></li>
       <li><a href="#why-us">Why Us</a></li>
       <li><a href="#courses">Courses</a></li>
@@ -147,18 +170,63 @@
     </ul>
   </nav>
 
-  <section class="hero" id="home">
-    <h1>Yogeo Analytics</h1>
-    <p>Get Experienced on BigData Hadoop<br>Learn from Experts and Achieve your career goals with industry-recognized learning paths</p>
+  <section class="hero" id="hero">
+    <div class="sub-heading">Get Experienced on BigData Hadoop</div>
+    <div class="description">Learn from Experts and Achieve your career goals with industry-recognized learning paths</div>
   </section>
 
   <section id="about">
     <h2>About Us</h2>
-    <p>Yogeo Analytics is a trusted training hub for Big Data technologies, where beginners become professionals. We focus on practical knowledge and career success.
-    With expert trainers and updated course content, we help students prepare for real-world data challenges effectively and confidently.</p>
+    <p>Yogeo Analytics is dedicated to bridging the gap between learning and employment by offering expert-driven training in Big Data technologies. We focus on practical, job-ready skills that help students transform their careers and stand out in the tech industry.</p>
   </section>
 
-  <!-- Other sections like Why Us, Courses, and Contact go here -->
+  <section id="why-us" class="why-us">
+    <h2>Why Us</h2>
+    <ul>
+      <li>Expert trainers with real-world experience</li>
+      <li>Job-oriented training with interview prep</li>
+      <li>Access to exclusive real interview audios</li>
+      <li>Support across AWS, Azure, and GCP</li>
+      <li>Assignments and doubt-clearing sessions</li>
+    </ul>
+  </section>
 
+  <section id="courses">
+    <h2>Courses</h2>
+    <div class="courses-grid">
+      <div class="course-card">
+        <img src="bigdata.png" alt="Big Data">
+        <h3>Big Data</h3>
+      </div>
+      <div class="course-card">
+        <img src="hadoop.png" alt="Hadoop">
+        <h3>Hadoop</h3>
+      </div>
+      <div class="course-card">
+        <img src="spark.png" alt="Spark">
+        <h3>Spark</h3>
+      </div>
+      <div class="course-card">
+        <img src="python.png" alt="Python">
+        <h3>Python</h3>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <div class="contact">
+      <div class="contact-info">
+        <p><strong>Email:</strong> support@yogeoanalytics.com</p>
+        <p><strong>Location:</strong> Hyderabad, India</p>
+      </div>
+      <div class="contact-form">
+        <input type="text" placeholder="Your Name">
+        <input type="email" placeholder="Your Email">
+        <textarea rows="4" placeholder="Your Message"></textarea>
+        <button type="submit">Send Message</button>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
