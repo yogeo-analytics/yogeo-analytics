@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Why Us - Yogeo Analytics</title>
+  <title>Yogeo Analytics</title>
   <style>
     body {
       margin: 0;
@@ -56,23 +56,54 @@
       font-weight: 600;
     }
 
-    .why-us {
+    .hero {
+      background-image: url('yogeo-plain-effective-compressed.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      min-height: 100vh;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 60px;
+    }
+
+    .hero h1 {
+      font-size: 3.9rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero h2 {
+      font-size: 2.4rem;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.5rem;
+      max-width: 900px;
+      color: #dbeafe;
+      line-height: 1.8;
+    }
+
+    .why-us {
       background-color: #0c1a24;
       padding: 6rem 2rem 4rem;
       color: white;
     }
 
     .why-us-text {
-      flex: 1;
-      padding-right: 2rem;
-      min-width: 300px;
+      max-width: 960px;
+      margin: 0 auto;
     }
 
     .why-us-text h2 {
       font-size: 2.2rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      text-align: center;
     }
 
     .why-us-text .point {
@@ -91,29 +122,23 @@
       color: #cbd5e1;
     }
 
-    .why-us-image {
-      flex: 1;
-      text-align: center;
-    }
-
-    .why-us-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
     @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        padding: 0 1rem;
+      }
+
       nav ul {
         flex-wrap: wrap;
         gap: 1rem;
-      }
-
-      .why-us {
-        flex-direction: column;
-      }
-
-      .why-us-text {
-        padding-right: 0;
       }
     }
   </style>
@@ -135,31 +160,41 @@
     </ul>
   </nav>
 
+  <section class="hero">
+    <h1>Yogeo Analytics</h1>
+    <h2>Get Experienced on BigData Hadoop</h2>
+    <p>Learn from Experts and Achieve your career goals with industry-recognized learning paths</p>
+  </section>
+
   <section class="why-us">
     <div class="why-us-text">
       <h2>Why Choose Yogeo Analytics?</h2>
       <div class="point">
-        <h3>1. Learn from experts active in their field</h3>
-        <p>Leading practitioners who bring current best practices and case studies to sessions that fit into your work schedule.</p>
+        <h3>1. Learn from industry-active experts</h3>
+        <p>Our trainers are real-time working professionals with strong experience in data engineering and cloud technologies.</p>
       </div>
       <div class="point">
-        <h3>2. Learn by working on real-world problems</h3>
-        <p>Capstone projects involving real world data sets with virtual labs for hands-on learning.</p>
+        <h3>2. Real-time Capstone Projects</h3>
+        <p>We offer problem statements used in production with code review and mentorship to help simulate on-the-job experience.</p>
       </div>
       <div class="point">
-        <h3>3. Develop skills for real career growth</h3>
-        <p>Cutting-edge curriculum designed in guidance with industry and academia to develop job-ready skills.</p>
+        <h3>3. 100% Job Oriented Curriculum</h3>
+        <p>Our training program is structured to align with current hiring trends, resume preparation, mock interviews, and skill assessments.</p>
       </div>
       <div class="point">
-        <h3>4. Online Training</h3>
-        <p>No matter wherever you are, enhance your skills by online training with a real trainer.</p>
+        <h3>4. Premium Learning Resources</h3>
+        <p>Access to job-centric videos, recorded sessions, downloadable material, real interview audios, and task-based assignments.</p>
       </div>
-    </div>
-    <div class="why-us-image">
-      <img src="0edb4454-e355-4de5-954e-630d5d91b9c3.png" alt="Why Us" />
+      <div class="point">
+        <h3>5. Live Interactive Online Sessions</h3>
+        <p>Classes are conducted in real-time with trainers interacting, clearing doubts, and giving feedback during live sessions.</p>
+      </div>
+      <div class="point">
+        <h3>6. Dedicated Support & Revision</h3>
+        <p>Our team provides one-on-one guidance, regular revisions, and personalized feedback for every student.</p>
+      </div>
     </div>
   </section>
 
 </body>
 </html>
-
