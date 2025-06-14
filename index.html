@@ -17,12 +17,13 @@
       justify-content: space-between;
       align-items: center;
       background-color: white;
-      padding: 1rem 2rem;
+      padding: 0.5rem 1rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
       width: 100%;
       z-index: 999;
+      font-size: 0.95rem;
     }
 
     .logo-container {
@@ -32,7 +33,7 @@
     }
 
     .logo-container img {
-      height: 50px;
+      height: 35px;
     }
 
     .logo-text {
@@ -43,14 +44,10 @@
 
     nav ul {
       display: flex;
-      gap: 2rem;
+      gap: 1.5rem;
       list-style: none;
       margin: 0;
       padding: 0;
-    }
-
-    nav ul li {
-      position: relative;
     }
 
     nav ul li a {
@@ -59,79 +56,70 @@
       font-weight: 600;
     }
 
-    nav ul li ul {
-      display: none;
-      position: absolute;
-      top: 2rem;
-      left: 0;
-      background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      list-style: none;
-      padding: 0.5rem 0;
-    }
-
-    nav ul li:hover ul {
-      display: block;
-    }
-
-    nav ul li ul li {
-      padding: 0.5rem 1rem;
-      white-space: nowrap;
-    }
-
-    nav ul li ul li a {
-      color: #1e293b;
-      font-weight: 400;
-    }
-
     .banner {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-end;
-      align-items: center;
-      text-align: center;
-      height: 100vh;
-      background-image: url('yogeo-backdrop-compressed.png');
+      background-image: url('yogeo-final-banner.png');
       background-size: cover;
       background-position: center;
-      padding: 3rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      padding-top: 100px;
+      text-align: center;
       color: white;
     }
 
     .sub-heading {
-      font-size: 3rem;
+      font-size: 1.8rem;
       font-weight: 500;
-      margin-top: 2rem;
+      margin-top: 1.2rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
     }
 
     .description {
-      font-size: 1.6rem;
-      max-width: 800px;
-      margin-top: 1rem;
+      font-size: 1.1rem;
+      max-width: 700px;
+      margin-top: 0.8rem;
       text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+    }
+
+    @media (max-width: 768px) {
+      nav ul {
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+
+      .banner {
+        padding-top: 80px;
+      }
+
+      .sub-heading {
+        font-size: 1.5rem;
+      }
+
+      .description {
+        font-size: 1rem;
+        padding: 0 1rem;
+      }
     }
   </style>
 </head>
 <body>
+
   <nav>
     <div class="logo-container">
-      <img src="logo.png" alt="Yogeo Analytics Logo">
+      <img src="logo.png" alt="Logo" />
       <div class="logo-text">Yogeo Analytics</div>
     </div>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about.html">About Us</a></li>
-      <li><a href="#">Why Us</a></li>
-      <li>
-        <a href="courses.html">Courses</a>
-        <ul>
-          <li><a href="#">Big Data</a></li>
-          <li><a href="#">Python</a></li>
-          <li><a href="#">Spark</a></li>
-        </ul>
-      </li>
-      <li><a href="#">Enroll Now</a></li>
+      <li><a href="more.html">Why Us</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Enroll Now</a></li>
+      <li><a href="tel:+918148994711">📞 +91 81489 94711</a></li>
     </ul>
   </nav>
 
@@ -139,5 +127,6 @@
     <div class="sub-heading">Get Experienced on BigData Hadoop</div>
     <div class="description">Learn from Experts and Achieve your career goals with industry-recognized learning paths</div>
   </section>
+
 </body>
 </html>
