@@ -1,122 +1,11 @@
+<!-- Save this as more.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Why Us - Yogeo Analytics</title>
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #0c1a24;
-      color: white;
-    }
-
-    nav {
-      background-color: white;
-      color: #1e293b;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.8rem 2rem;
-      position: fixed;
-      top: 0;
-      width: 100%;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    .logo-container {
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .logo-container img {
-      height: 38px;
-    }
-
-    .logo-text {
-      font-size: 1.2rem;
-      font-weight: bold;
-      color: #1e293b;
-    }
-
-    nav ul {
-      list-style: none;
-      display: flex;
-      gap: 1.5rem;
-      margin: 0;
-      padding: 0;
-    }
-
-    nav ul li a {
-      text-decoration: none;
-      color: #1e293b;
-      font-weight: 600;
-    }
-
-    .why-us {
-      display: flex;
-      flex-wrap: wrap;
-      background-color: #0c1a24;
-      padding: 6rem 2rem 4rem;
-      color: white;
-    }
-
-    .why-us-text {
-      flex: 1;
-      padding-right: 2rem;
-      min-width: 300px;
-    }
-
-    .why-us-text h2 {
-      font-size: 2.2rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .why-us-text .point {
-      margin-bottom: 2rem;
-    }
-
-    .why-us-text .point h3 {
-      margin: 0;
-      font-size: 1.2rem;
-      color: #93c5fd;
-    }
-
-    .why-us-text .point p {
-      margin: 0.5rem 0 0;
-      font-size: 1rem;
-      color: #cbd5e1;
-    }
-
-    .why-us-image {
-      flex: 1;
-      text-align: center;
-    }
-
-    .why-us-image img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 10px;
-    }
-
-    @media (max-width: 768px) {
-      nav ul {
-        flex-wrap: wrap;
-        gap: 1rem;
-      }
-
-      .why-us {
-        flex-direction: column;
-      }
-
-      .why-us-text {
-        padding-right: 0;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
@@ -135,7 +24,7 @@
     </ul>
   </nav>
 
-  <section class="why-us">
+  <section class="why-us" style="margin-top: 100px; padding: 4rem 2rem;">
     <div class="why-us-text">
       <h2>Why Choose Yogeo Analytics?</h2>
       <div class="point">
@@ -154,12 +43,19 @@
         <h3>4. Online Training</h3>
         <p>No matter wherever you are, enhance your skills by online training with a real trainer.</p>
       </div>
+      <div class="point">
+        <h3>5. Personalized Career Support</h3>
+        <p>We guide you with mock interviews, resume reviews, and real-time project exposure to land your dream job.</p>
+      </div>
+      <div class="point">
+        <h3>6. Interview Kit + Real Audio</h3>
+        <p>Gain access to recorded real-time interview experiences to build your confidence and preparation.</p>
+      </div>
     </div>
     <div class="why-us-image">
-      <img src="0edb4454-e355-4de5-954e-630d5d91b9c3.png" alt="Why Us" />
+      <img src="0edb4454-e355-4de5-954e-630d5d91b9c3.png" alt="Why Us Image" />
     </div>
   </section>
 
 </body>
 </html>
-
