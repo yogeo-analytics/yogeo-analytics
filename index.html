@@ -81,7 +81,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: 110vh;
+      height: 100vh;
       background-image: url('github_compressed_backdrop.png');
       background-size: cover;
       background-position: center;
@@ -110,6 +110,49 @@
       line-height: 1.6;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     }
+
+    .section-title {
+      color: #38bdf8;
+      font-size: 2.4rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    .section-content {
+      font-size: 1.3rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+      text-align: center;
+    }
+
+    .courses-container {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      margin-top: 2rem;
+    }
+
+    .course-card {
+      background-color: #1e293b;
+      padding: 1.5rem;
+      border-radius: 12px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .course-card img {
+      height: 80px;
+      margin-bottom: 1rem;
+    }
+
+    .course-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+    }
   </style>
 </head>
 <body>
@@ -132,6 +175,56 @@
     <div class="main-heading">Yogeo Analytics</div>
     <div class="sub-heading">Get Experienced on BigData Hadoop</div>
     <div class="description">Learn from Experts and Achieve your career goals with industry-recognized learning paths</div>
+  </section>
+
+  <section id="about">
+    <div class="section-title">About Us</div>
+    <div class="section-content">
+      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills through hands-on learning experiences in real-time data processing, analytics tools, and cloud platforms.
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="section-title">Why Us</div>
+    <div class="section-content">
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>1. Learn from experts active in their field:</strong> Leading practitioners bring current best practices and real case studies into every session.</li>
+        <li><strong>2. Learn by working on real-world problems:</strong> Capstone projects using industry data sets and cloud labs ensure hands-on learning.</li>
+        <li><strong>3. Develop skills for real career growth:</strong> Our job-ready curriculum is designed with industry experts and academic leaders.</li>
+        <li><strong>4. Online Training:</strong> Learn from anywhere with flexible and live instructor-led sessions.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="courses">
+    <div class="section-title">Courses</div>
+    <div class="courses-container">
+      <div class="course-card">
+        <img src="bigdata.png" alt="Big Data">
+        <div class="course-title">Big Data</div>
+      </div>
+      <div class="course-card">
+        <img src="hadoop.png" alt="Hadoop">
+        <div class="course-title">Hadoop</div>
+      </div>
+      <div class="course-card">
+        <img src="spark.png" alt="Spark">
+        <div class="course-title">Spark</div>
+      </div>
+      <div class="course-card">
+        <img src="python.png" alt="Python">
+        <div class="course-title">Python</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="section-title">Contact</div>
+    <div class="section-content">
+      <p>Email us at: <strong>zeyobronanalytics@gmail.com</strong></p>
+      <p>Call us: <strong>+91 7395899448</strong></p>
+      <p>Location: <strong>Thiruvallur, Tamil Nadu, India, 602002</strong></p>
+    </div>
   </section>
 </body>
 </html>
