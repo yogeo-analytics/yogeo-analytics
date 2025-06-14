@@ -1,35 +1,110 @@
-<!-- about.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>About Us – Yogeo Analytics</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us - Yogeo Analytics</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
-      background-color: #0b1320;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
-      padding: 40px;
-      line-height: 1.6;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0c1a24;
+      color: #e2e8f0;
     }
-    h1 {
-      color: #00bfff;
+
+    nav {
+      background-color: white;
+      color: #1e293b;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.8rem 2rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
     }
-    p {
-      max-width: 800px;
+
+    .logo-container {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .logo-container img {
+      height: 38px;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #1e293b;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #1e293b;
+      font-weight: 600;
+    }
+
+    .about-section {
+      padding: 6rem 2rem 3rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about-section h2 {
+      font-size: 2rem;
+      color: #3b82f6;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-section p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      margin-bottom: 1.2rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        padding-top: 7rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>About Yogeo Analytics</h1>
-  <p>
-    At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you're just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.
-  </p>
-  <p>
-    Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large-scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.
-  </p>
-  <p>
-    Join us and transform your career with cutting-edge Big Data expertise.
-  </p>
+  <nav>
+    <div class="logo-container">
+      <img src="logo.png" alt="Logo" />
+      <div class="logo-text">Yogeo Analytics</div>
+    </div>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="more.html">Why Us</a></li>
+      <li><a href="courses.html">Courses</a></li>
+      <li><a href="contact.html">Enroll Now</a></li>
+    </ul>
+  </nav>
+
+  <section class="about-section">
+    <h2>About Yogeo Analytics</h2>
+    <p>At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you're just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.</p>
+
+    <p>Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large-scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.</p>
+
+    <p>Join us and transform your career with cutting-edge Big Data expertise.</p>
+  </section>
+
 </body>
 </html>
