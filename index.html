@@ -17,7 +17,7 @@
       justify-content: space-between;
       align-items: center;
       background-color: white;
-      padding: 0.4rem 1.2rem;
+      padding: 0.5rem 1.5rem;
       box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       position: fixed;
       top: 0;
@@ -32,18 +32,18 @@
     }
 
     .logo-container img {
-      height: 30px;
+      height: 40px;
     }
 
     .logo-text {
-      font-size: 0.9rem;
+      font-size: 1rem;
       font-weight: 600;
       color: #1e293b;
     }
 
     nav ul {
       display: flex;
-      gap: 1rem;
+      gap: 1.2rem;
       list-style: none;
       margin: 0;
       padding: 0;
@@ -56,9 +56,22 @@
       font-size: 0.9rem;
     }
 
+    .contact-info-bar {
+      display: flex;
+      align-items: center;
+      font-size: 0.9rem;
+      color: #1e40af;
+      gap: 0.5rem;
+    }
+
+    .contact-info-bar::before {
+      content: '\260E';
+      color: #ec4899;
+    }
+
     section {
       padding: 6rem 2rem 4rem;
-      max-width: 1100px;
+      max-width: 100%;
       margin: auto;
     }
 
@@ -68,7 +81,7 @@
       justify-content: center;
       align-items: center;
       text-align: center;
-      height: 100vh;
+      height: 110vh;
       background-image: url('github_compressed_backdrop.png');
       background-size: cover;
       background-position: center;
@@ -97,78 +110,6 @@
       line-height: 1.6;
       text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
     }
-
-    h2 {
-      color: #3b82f6;
-      font-size: 2.5rem;
-      margin-bottom: 2rem;
-      text-align: center;
-    }
-
-    p, ul li {
-      font-size: 1.4rem;
-      line-height: 1.8;
-    }
-
-    .why-us ul {
-      list-style: none;
-      padding: 0;
-    }
-
-    .why-us ul li::before {
-      content: "\2713";
-      color: #3b82f6;
-      margin-right: 10px;
-    }
-
-    .courses-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 2rem;
-    }
-
-    .course-card {
-      background-color: #13293d;
-      padding: 1.5rem;
-      border-radius: 10px;
-      text-align: center;
-    }
-
-    .course-card img {
-      width: 200px;
-      height: 200px;
-      object-fit: contain;
-      margin-bottom: 1rem;
-    }
-
-    .contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2rem;
-    }
-
-    .contact-info, .contact-form {
-      flex: 1 1 300px;
-    }
-
-    .contact-form input, .contact-form textarea {
-      width: 100%;
-      padding: 1rem;
-      margin: 0.75rem 0;
-      border: none;
-      border-radius: 6px;
-      font-size: 1.2rem;
-    }
-
-    .contact-form button {
-      background-color: #3b82f6;
-      color: white;
-      padding: 1rem 2rem;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1.2rem;
-    }
   </style>
 </head>
 <body>
@@ -184,68 +125,13 @@
       <li><a href="#courses">Courses</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <div class="contact-info-bar">+91 7395899448</div>
   </nav>
 
   <section class="hero" id="hero">
     <div class="main-heading">Yogeo Analytics</div>
     <div class="sub-heading">Get Experienced on BigData Hadoop</div>
     <div class="description">Learn from Experts and Achieve your career goals with industry-recognized learning paths</div>
-  </section>
-
-  <section id="about">
-    <h2>About Yogeo Analytics</h2>
-    <p>At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies.</p>
-    <p>Whether you're just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.</p>
-  </section>
-
-  <section id="why-us" class="why-us">
-    <h2>Why Choose Us</h2>
-    <ul>
-      <li>Learn from experts active in their field</li>
-      <li>Work on real-world problems with capstone projects</li>
-      <li>Develop skills for real career growth</li>
-      <li>Flexible and accessible online training</li>
-    </ul>
-  </section>
-
-  <section id="courses">
-    <h2>Courses</h2>
-    <div class="courses-grid">
-      <div class="course-card">
-        <img src="bigdata.png" alt="Big Data">
-        <div>Big Data</div>
-      </div>
-      <div class="course-card">
-        <img src="hadoop.png" alt="Hadoop">
-        <div>Hadoop</div>
-      </div>
-      <div class="course-card">
-        <img src="spark.png" alt="Spark">
-        <div>Spark</div>
-      </div>
-      <div class="course-card">
-        <img src="python.png" alt="Python">
-        <div>Python</div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <div class="contact">
-      <div class="contact-info">
-        <p><strong>Location:</strong> Thiruvallur, Tamil Nadu, India, 602002</p>
-        <p><strong>Email:</strong> zeyobronanalytics@gmail.com</p>
-        <p><strong>Phone:</strong> +91 73958 99448</p>
-      </div>
-      <div class="contact-form">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="Email" required>
-        <input type="text" placeholder="Subject" required>
-        <textarea placeholder="Message" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </div>
-    </div>
   </section>
 </body>
 </html>
