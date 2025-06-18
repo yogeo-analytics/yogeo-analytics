@@ -204,14 +204,48 @@
     <div class="contact-form">
       <h2>Get In Touch</h2>
       <form>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="title" placeholder="Subject">
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <label for="captcha">Enter CAPTCHA:</label>
-        <input type="text" name="captcha" placeholder="Type here...">
-        <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
-      </form>
+        <div class="form-wrapper">
+  <div class="section-title">Get In Touch</div>
+  <form action="https://formspree.io/f/meokzzye" method="POST" onsubmit="return validateRecaptcha();">
+    <label for="name">Name *</label>
+    <input type="text" id="name" name="name" required />
+
+    <label for="email">Email *</label>
+    <input type="email" id="email" name="email" required />
+
+    <label for="title">Title *</label>
+    <input type="text" id="title" name="title" required />
+
+    <label for="message">Message *</label>
+    <textarea id="message" name="message" rows="5" required></textarea>
+
+    <!-- reCAPTCHA widget -->
+    <div class="g-recaptcha" data-sitekey="6LeUcYcpAAAAABwPZXhRLDt3YvGqihTOsxWbUKYo"></div>
+
+    <button type="submit">Send Message</button>
+  </form>
+</div>
+
+<!-- reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script>
+  function validateRecaptcha() {
+    const response = grecaptcha.getResponse();
+    if (response.length === 0) {
+      alert("Please verify that you are not a robot.");
+      return false;
+    }
+
+    // Optional: redirect to thankyou.html after successful submission
+    setTimeout(function () {
+      window.location.href = "thankyou.html";
+    }, 1000);
+
+    return true;
+  }
+</script>
+      
     </div>
   </section>
 
