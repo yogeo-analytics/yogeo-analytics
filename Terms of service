@@ -1,3 +1,109 @@
+<!-- Updated More Page with Terms of Service and Privacy Policy Modals -->
+
+<div class="more-section">
+  <h2>More</h2>
+  <div class="info-buttons">
+    <button onclick="openModal('termsModal')">Terms of Service</button>
+    <button onclick="openModal('privacyModal')">Privacy Policy</button>
+  </div>
+</div>
+
+<!-- TERMS OF SERVICE MODAL -->
+<div id="termsModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('termsModal')">&times;</span>
+    <h2>Terms of Service</h2>
+    <div class="terms-of-service">
+      <p>may limit, suspend, or terminate your use of any of the Services, including, without limitation those related to the Online Courses, such as access to Mentors, evaluation services, career services, records of Online Course completion, or other Yogeo Analytics Services. You also understand that Yogeo Analytics may modify or discontinue any or all of the Services related to its Online Courses at its sole discretion.</p>
+      <p><strong>DISCLAIMER OF WARRANTIES</strong><br />YOU EXPRESSLY ACKNOWLEDGE AND AGREE THAT YOUR USE OF ANY OF THE SERVICES AND ALL CONTENT IS AT YOUR SOLE RISK AND RESPONSIBILITY. [...]</p>
+      <p><strong>MISCELLANEOUS PROVISIONS</strong><br />This Terms of Use is governed by the laws of the State of Delaware. Any dispute shall be subject to the jurisdiction of the courts located in New Castle city, Delaware. Yogeo Analytics may assign its rights without notice. If any part of this Terms of Use is held to be unenforceable, that part shall be severed and the rest shall remain in effect. Yogeo Analytics is not liable for events beyond its control (force majeure), and it is not responsible for unauthorized changes made to this page by hacking or otherwise.</p>
+    </div>
+  </div>
+</div>
+
+<!-- PRIVACY POLICY MODAL -->
+<div id="privacyModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('privacyModal')">&times;</span>
+    <h2>Privacy Policy</h2>
+    <div class="privacy-policy">
+      <p>[Privacy Policy content goes here – please paste it for me to include]</p>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL STYLES -->
+<style>
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-height: 80%;
+  overflow-y: auto;
+  border-radius: 10px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.info-buttons button {
+  margin-right: 10px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1e40af;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+
+<!-- MODAL SCRIPTS -->
+<script>
+function openModal(id) {
+  document.getElementById(id).style.display = 'block';
+}
+
+function closeModal(id) {
+  document.getElementById(id).style.display = 'none';
+}
+
+window.onclick = function(event) {
+  const modals = ['termsModal', 'privacyModal'];
+  modals.forEach(id => {
+    const modal = document.getElementById(id);
+    if (event.target == modal) {
+      modal.style.display = 'none';
+    }
+  });
+}
+</script>
 <div class="terms-of-service">
   <p>may limit, suspend, or terminate your use of any of the Services, including, without limitation those related to the Online Courses, such as access to Mentors, evaluation services, career services, records of Online Course completion, or other Yogeo Analytics Services. You also understand that Yogeo Analytics may modify or discontinue any or all of the Services related to its Online Courses at its sole discretion.</p>
 
