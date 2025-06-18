@@ -58,10 +58,41 @@
       padding: 0;
     }
 
+    nav ul li {
+      position: relative;
+    }
+
     nav ul li a {
       text-decoration: none;
       color: #1e293b;
       font-weight: 600;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: white;
+      min-width: 220px;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+
+    .dropdown-content a {
+      color: #1e293b;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+      font-size: 1rem;
+    }
+
+    .dropdown-content a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .contact-info-bar {
@@ -227,6 +258,12 @@
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#courses">Courses</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#">More</a>
+          <div class="dropdown-content">
+            <a href="more.html" target="_blank">Terms of Service & Privacy Policy</a>
+          </div>
+        </li>
       </ul>
     </div>
   </nav>
