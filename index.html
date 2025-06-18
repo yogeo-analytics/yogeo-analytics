@@ -14,7 +14,7 @@
 
     nav {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       background-color: white;
       padding: 1rem 2rem;
@@ -24,6 +24,14 @@
       width: 100%;
       z-index: 999;
       font-size: 1.1rem;
+    }
+
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      max-width: 1200px;
     }
 
     .logo-container {
@@ -54,6 +62,19 @@
       text-decoration: none;
       color: #1e293b;
       font-weight: 600;
+    }
+
+    .contact-info-bar {
+      font-size: 1.1rem;
+      color: #1e40af;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    .contact-info-bar::before {
+      content: '\260E';
+      color: #ec4899;
+      margin-right: 0.4rem;
     }
 
     section {
@@ -179,38 +200,35 @@
       font-size: 1rem;
     }
 
-    footer {
-      background-color: #1e293b;
-      padding: 1.5rem;
+    .policy-link {
+      display: block;
       text-align: center;
-      font-size: 1rem;
-      color: #cbd5e1;
+      margin-top: 3rem;
+      font-size: 0.95rem;
     }
 
-    footer a {
-      color: #38bdf8;
-      text-decoration: none;
-      margin: 0 0.5rem;
-    }
-
-    footer a:hover {
+    .policy-link a {
+      color: #94a3b8;
       text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <nav>
-    <div class="logo-container">
-      <img src="logo.png" alt="Yogeo Analytics Logo">
-      <div class="logo-text">Yogeo Analytics</div>
+    <div class="nav-inner">
+      <div class="logo-container">
+        <img src="logo.png" alt="Yogeo Analytics Logo">
+        <div class="logo-text">Yogeo Analytics</div>
+      </div>
+      <div class="contact-info-bar">+91 7395899448</div>
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#why-us">Why Us</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
-    <ul>
-      <li><a href="#hero">Home</a></li>
-      <li><a href="#about">About Us</a></li>
-      <li><a href="more.html">More</a></li>
-      <li><a href="#courses">Courses</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
   </nav>
 
   <section class="hero" id="hero">
@@ -222,26 +240,51 @@
   <section id="about">
     <div class="section-title">About Us</div>
     <div class="section-content">
-      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training...
+      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you’re just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.<br><br>
+      Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.
+    </div>
+  </section>
+
+  <section id="why-us">
+    <div class="section-title">Why Us</div>
+    <div class="section-content">
+      <ul style="list-style: none; padding: 0;">
+        <li><strong>1. Learn from experts active in their field:</strong> Leading practitioners bring current best practices and real case studies into every session.</li>
+        <li><strong>2. Learn by working on real-world problems:</strong> Capstone projects using industry data sets and cloud labs ensure hands-on learning.</li>
+        <li><strong>3. Develop skills for real career growth:</strong> Our job-ready curriculum is designed with industry experts and academic leaders.</li>
+        <li><strong>4. Online Training:</strong> Learn from anywhere with flexible and live instructor-led sessions.</li>
+      </ul>
     </div>
   </section>
 
   <section id="courses">
     <div class="section-title">Courses</div>
     <div class="courses-container">
-      <div class="course-card"><img src="bigdata.png"><div class="course-title">Big Data</div></div>
-      <div class="course-card"><img src="hadoop.png"><div class="course-title">Hadoop</div></div>
-      <div class="course-card"><img src="spark.png"><div class="course-title">Spark</div></div>
-      <div class="course-card"><img src="python.png"><div class="course-title">Python</div></div>
+      <div class="course-card">
+        <img src="bigdata.png" alt="Big Data">
+        <div class="course-title">Big Data</div>
+      </div>
+      <div class="course-card">
+        <img src="hadoop.png" alt="Hadoop">
+        <div class="course-title">Hadoop</div>
+      </div>
+      <div class="course-card">
+        <img src="spark.png" alt="Spark">
+        <div class="course-title">Spark</div>
+      </div>
+      <div class="course-card">
+        <img src="python.png" alt="Python">
+        <div class="course-title">Python</div>
+      </div>
     </div>
   </section>
 
   <section id="contact">
     <div class="section-title">Contact</div>
     <div class="section-content">
-      <p>Email: <strong>zeyobronanalytics@gmail.com</strong></p>
-      <p>Phone: <strong>+91 7395899448</strong></p>
-      <p>Address: <strong>No. 3, Rajeswari Nagar, Tiruvallur, TN 602002</strong></p>
+      <p>Email us at: <strong>zeyobronanalytics@gmail.com</strong></p>
+      <p>Call us: <strong>+91 7395899448</strong></p>
+      <p>Location: <strong>Thiruvallur, Tamil Nadu, India, 602002</strong></p>
     </div>
     <div class="form-wrapper">
       <div class="section-title">Get In Touch</div>
@@ -255,12 +298,10 @@
       <textarea id="message" name="message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </div>
-  </section>
 
-  <footer>
-    &copy; 2025 Yogeo Analytics. All rights reserved.<br />
-    <a href="more.html#terms">Terms of Service</a> |
-    <a href="more.html#privacy">Privacy Policy</a>
-  </footer>
+    <div class="policy-link">
+      <a href="more.html" target="_blank">Terms of Service & Privacy Policy</a>
+    </div>
+  </section>
 </body>
 </html>
