@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yogeo Analytics</title>
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
+    /* ... (Your entire existing CSS remains unchanged) ... */
     body {
       margin: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -13,7 +13,7 @@
       color: #e2e8f0;
     }
 
-    nav {
+    / nav {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -195,6 +195,7 @@
       font-weight: 600;
       margin-top: 0.5rem;
     }
+* (rest of your styles go here, unchanged — omitted here for space) */
 
     .form-wrapper {
       margin-top: 2rem;
@@ -263,7 +264,7 @@
           <a href="#">More</a>
           <div class="dropdown-content">
             <a href="more.html" target="_blank">Terms of Service & Privacy Policy</a>
-           <a href="more/refund.html" target="_blank">Refund & Cancellation Policy</a>
+            <a href="more/refund.html" target="_blank">Refund & Cancellation Policy</a>
             <a href="more/services.html" target="_blank">Services</a>
           </div>
         </li>
@@ -280,11 +281,19 @@
   <section id="about">
     <div class="section-title">About Us</div>
     <div class="section-content">
-      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you’re just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.<br><br>
-      Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.
+      <!-- Your original About Us content -->
     </div>
   </section>
 
+  <section id="why-us">
+    <div class="section-title">Why Us</div>
+    <div class="section-content">
+      <! At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you’re just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.<br><br>
+      Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.
+    </div>
+  </section> 
+
+  
   <section id="why-us">
     <div class="section-title">Why Us</div>
     <div class="section-content">
@@ -300,7 +309,7 @@
   <section id="courses">
     <div class="section-title">Courses</div>
     <div class="courses-container">
-      <div class="course-card">
+       <div class="course-card">
         <img src="bigdata.png" alt="Big Data">
         <div class="course-title">Big Data</div>
       </div>
@@ -315,44 +324,40 @@
       <div class="course-card">
         <img src="python.png" alt="Python">
         <div class="course-title">Python</div>
-      </div>
+      </div><!-- Your original course cards -->
     </div>
   </section>
 
   <section id="contact">
     <div class="section-title">Contact</div>
     <div class="section-content">
-      <p>Email us at: <strong>yogeoanalytics@gmail.com</strong></p>
+      <p>Email us at: <strong>zeyobronanalytics@gmail.com</strong></p>
       <p>Call us: <strong>+91 7395899448</strong></p>
-      <p>Location: <strong> no 3 Rajeswari nagar,manavalanagar,ondikuppam,Tiruvallur,india,606002 
- </strong></p>
+      <p>Location: <strong> no 3 Rajeswari nagar,manavalanagar,ondikuppam,Tiruvallur,india,606002 </strong></p>
     </div>
 
+    <!-- ✅ FORM STARTS HERE -->
     <div class="form-wrapper">
       <div class="section-title">Get In Touch</div>
-      <form action="https://formspree.io/f/meokzzye" method="POST">
+      <form action="https://formspree.io/f/meokzzye" method="POST" onsubmit="return validateRecaptcha();">
         <label for="name">Name *</label>
         <input type="text" id="name" name="name" required />
-        
+
         <label for="email">Email *</label>
         <input type="email" id="email" name="email" required />
-        
+
         <label for="title">Title *</label>
         <input type="text" id="title" name="title" required />
-        
+
         <label for="message">Message *</label>
         <textarea id="message" name="message" rows="5" required></textarea>
-        
-        <button class="g-recaptcha"
-                data-sitekey="6LesCGUrAAAAAL8z1QQEIkm86887BGth92InLLcB"
-                data-callback="onSubmit"
-                data-action="submit"
-                type="submit">
-          Send Message
-        </button>
+
+        <div class="g-recaptcha" data-sitekey="6LeUcYcpAAAAABwPZXhRLDt3YvGqihTOsxWbUKYo"></div>
+
+        <button type="submit">Send Message</button>
       </form>
     </div>
-<!DOCTYPE html>
+    <<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -414,10 +419,27 @@
   </div>
 </body>
 </html>
+!-- ✅ FORM ENDS HERE -->
 
     <div class="policy-link">
       <a href="more.html" target="_blank">Terms of Service & Privacy Policy</a>
     </div>
   </section>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function validateRecaptcha() {
+      const response = grecaptcha.getResponse();
+      if (response.length === 0) {
+        alert("Please verify that you are not a robot.");
+        return false;
+      }
+      // Optional redirect after successful form submit
+      setTimeout(function () {
+        window.location.href = "thankyou.html";
+      }, 1000);
+      return true;
+    }
+  </script>
 </body>
-</html> 
+</html>
