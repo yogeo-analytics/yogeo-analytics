@@ -1,10 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yogeo Analytics</title> this is my index.html code now give me the code with the changes i want lyk chnge the contact code with the new one and give me the entire index code 
+  <title>Yogeo Analytics</title>
   <style>
     body {
       margin: 0;
@@ -55,19 +54,6 @@
       text-decoration: none;
       color: #1e293b;
       font-weight: 600;
-    }
-
-    .contact-info-bar {
-      display: flex;
-      align-items: center;
-      font-size: 1.1rem;
-      color: #1e40af;
-      gap: 0.5rem;
-    }
-
-    .contact-info-bar::before {
-      content: '\260E';
-      color: #ec4899;
     }
 
     section {
@@ -192,6 +178,24 @@
       border-radius: 6px;
       font-size: 1rem;
     }
+
+    footer {
+      background-color: #1e293b;
+      padding: 1.5rem;
+      text-align: center;
+      font-size: 1rem;
+      color: #cbd5e1;
+    }
+
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -203,11 +207,10 @@
     <ul>
       <li><a href="#hero">Home</a></li>
       <li><a href="#about">About Us</a></li>
-      <li><a href="#why-us">Why Us</a></li>
+      <li><a href="more.html">More</a></li>
       <li><a href="#courses">Courses</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div class="contact-info-bar">+91 7395899448</div>
   </nav>
 
   <section class="hero" id="hero">
@@ -219,51 +222,26 @@
   <section id="about">
     <div class="section-title">About Us</div>
     <div class="section-content">
-      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you’re just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.<br><br>
-      Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.
-    </div>
-  </section>
-
-  <section id="why-us">
-    <div class="section-title">Why Us</div>
-    <div class="section-content">
-      <ul style="list-style: none; padding: 0;">
-        <li><strong>1. Learn from experts active in their field:</strong> Leading practitioners bring current best practices and real case studies into every session.</li>
-        <li><strong>2. Learn by working on real-world problems:</strong> Capstone projects using industry data sets and cloud labs ensure hands-on learning.</li>
-        <li><strong>3. Develop skills for real career growth:</strong> Our job-ready curriculum is designed with industry experts and academic leaders.</li>
-        <li><strong>4. Online Training:</strong> Learn from anywhere with flexible and live instructor-led sessions.</li>
-      </ul>
+      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training...
     </div>
   </section>
 
   <section id="courses">
     <div class="section-title">Courses</div>
     <div class="courses-container">
-      <div class="course-card">
-        <img src="bigdata.png" alt="Big Data">
-        <div class="course-title">Big Data</div>
-      </div>
-      <div class="course-card">
-        <img src="hadoop.png" alt="Hadoop">
-        <div class="course-title">Hadoop</div>
-      </div>
-      <div class="course-card">
-        <img src="spark.png" alt="Spark">
-        <div class="course-title">Spark</div>
-      </div>
-      <div class="course-card">
-        <img src="python.png" alt="Python">
-        <div class="course-title">Python</div>
-      </div>
+      <div class="course-card"><img src="bigdata.png"><div class="course-title">Big Data</div></div>
+      <div class="course-card"><img src="hadoop.png"><div class="course-title">Hadoop</div></div>
+      <div class="course-card"><img src="spark.png"><div class="course-title">Spark</div></div>
+      <div class="course-card"><img src="python.png"><div class="course-title">Python</div></div>
     </div>
   </section>
 
   <section id="contact">
     <div class="section-title">Contact</div>
     <div class="section-content">
-      <p>Email us at: <strong>zeyobronanalytics@gmail.com</strong></p>
-      <p>Call us: <strong>+91 7395899448</strong></p>
-      <p>Location: <strong>no3 Rajeswari nagar,manavalanagar,odikuppam,Tiruvallur India, 602002</strong></p>
+      <p>Email: <strong>zeyobronanalytics@gmail.com</strong></p>
+      <p>Phone: <strong>+91 7395899448</strong></p>
+      <p>Address: <strong>No. 3, Rajeswari Nagar, Tiruvallur, TN 602002</strong></p>
     </div>
     <div class="form-wrapper">
       <div class="section-title">Get In Touch</div>
@@ -278,5 +256,11 @@
       <button type="submit">Send Message</button>
     </div>
   </section>
+
+  <footer>
+    &copy; 2025 Yogeo Analytics. All rights reserved.<br />
+    <a href="more.html#terms">Terms of Service</a> |
+    <a href="more.html#privacy">Privacy Policy</a>
+  </footer>
 </body>
 </html>
