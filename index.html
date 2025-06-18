@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yogeo Analytics</title>
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
   <style>
     body {
       margin: 0;
@@ -321,31 +322,36 @@
   <section id="contact">
     <div class="section-title">Contact</div>
     <div class="section-content">
-      <p>Email us at: <strong>zeyobronanalytics@gmail.com</strong></p>
+      <p>Email us at: <strong>yogeoanalytics@gmail.com</strong></p>
       <p>Call us: <strong>+91 7395899448</strong></p>
       <p>Location: <strong> no 3 Rajeswari nagar,manavalanagar,ondikuppam,Tiruvallur,india,606002 
  </strong></p>
     </div>
-    <!-- Inside your contact section -->
-<div class="form-wrapper">
-  <div class="section-title">Get In Touch</div>
-  <form action="https://formspree.io/f/meokzzye" method="POST">
-    <label for="name">Name *</label>
-    <input type="text" id="name" name="name" required />
-    
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="email" required />
-    
-    <label for="title">Title *</label>
-    <input type="text" id="title" name="title" required />
-    
-    <label for="message">Message *</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-    
-    <button type="submit">Send Message</button>
-  </form>
-</div>
 
+    <div class="form-wrapper">
+      <div class="section-title">Get In Touch</div>
+      <form action="https://formspree.io/f/meokzzye" method="POST">
+        <label for="name">Name *</label>
+        <input type="text" id="name" name="name" required />
+        
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required />
+        
+        <label for="title">Title *</label>
+        <input type="text" id="title" name="title" required />
+        
+        <label for="message">Message *</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button class="g-recaptcha"
+                data-sitekey="6LesCGUrAAAAAL8z1QQEIkm86887BGth92InLLcB"
+                data-callback="onSubmit"
+                data-action="submit"
+                type="submit">
+          Send Message
+        </button>
+      </form>
+    </div>
 
     <div class="policy-link">
       <a href="more.html" target="_blank">Terms of Service & Privacy Policy</a>
