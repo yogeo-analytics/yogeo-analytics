@@ -207,7 +207,11 @@
         
         <div class="form-wrapper">
   <div class="section-title">Get In Touch</div>
-  <form action="https://formspree.io/f/meokzzye" method="POST" onsubmit="return validateRecaptcha();">
+  <form 
+    action="https://formspree.io/f/meokzzye" 
+    method="POST" 
+    onsubmit="return validateRecaptcha();"
+  >
     <label for="name">Name *</label>
     <input type="text" id="name" name="name" required />
 
@@ -220,29 +224,28 @@
     <label for="message">Message *</label>
     <textarea id="message" name="message" rows="5" required></textarea>
 
-    <!-- reCAPTCHA widget -->
-    <div class="g-recaptcha" data-sitekey="6LeUcYcpAAAAABwPZXhRLDt3YvGqihTOsxWbUKYo"></div>
+    <!-- Google reCAPTCHA -->
+    <div style="margin-top: 1rem;" class="g-recaptcha" data-sitekey="6LcFxTgpAAAAAFmf2iAvKrKZBuTh1XqI8j3qNqq2"></div>
 
     <button type="submit">Send Message</button>
   </form>
 </div>
 
-<!-- reCAPTCHA script -->
+<!-- reCAPTCHA Script -->
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
+<!-- reCAPTCHA Validation & Redirect -->
 <script>
   function validateRecaptcha() {
     const response = grecaptcha.getResponse();
     if (response.length === 0) {
-      alert("Please verify that you are not a robot.");
+      alert("Please verify you're not a robot.");
       return false;
     }
-
-    // Optional: redirect to thankyou.html after successful submission
-    setTimeout(function () {
+    // Delay redirect to allow Formspree to process
+    setTimeout(() => {
       window.location.href = "thankyou.html";
     }, 1000);
-
     return true;
   }
 </script>
