@@ -10,6 +10,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #0c1a24;
       color: #e2e8f0;
+      scroll-behavior: smooth; /* enables smooth scroll */
     }
 
     nav {
@@ -39,12 +40,12 @@
       align-items: center;
       gap: 0.4rem;
     }
-  .left-header {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  margin-right: auto; 
-  padding-left: 0;
+    .left-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-right: auto; 
+      padding-left: 0;
     } 
 
     .logo-container img {
@@ -63,7 +64,7 @@
       list-style: none;
       margin: 0;
       padding: 0; 
-      margin-left:3rem
+      margin-left: 3rem;
     }
 
     nav ul li {
@@ -74,33 +75,6 @@
       text-decoration: none;
       color: #1e293b;
       font-weight: 600;
-    }
-
-    .dropdown-content {
-      display: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: white;
-      min-width: 220px;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
-      z-index: 1000;
-    }
-
-    .dropdown-content a {
-      color: #1e293b;
-      padding: 10px 16px;
-      text-decoration: none;
-      display: block;
-      font-size: 1rem;
-    }
-
-    .dropdown-content a:hover {
-      background-color: #f0f0f0;
-    }
-
-    .dropdown:hover .dropdown-content {
-      display: block;
     }
 
     .contact-info-bar {
@@ -265,9 +239,8 @@
         <li><a href="#about">About Us</a></li>
         <li><a href="#why-us">Why Us</a></li>
         <li><a href="#courses">Courses</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <a href="index.html#contact.html">Enroll Now</a></li>
-      
+        <li><a href="#contact">Contact</a></li> <!-- ✅ changed -->
+        <li><a href="#contact">Enroll Now</a></li> <!-- optional update -->
       </ul>
     </div>
   </nav>
@@ -281,7 +254,7 @@
   <section id="about">
     <div class="section-title">About Us</div>
     <div class="section-content">
-      At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you’re just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.<br><br>
+     At Yogeo Analytics, we specialize in delivering industry-relevant Big Data training designed to empower professionals and organizations in the data-driven world. Our mission is to bridge the gap between theoretical knowledge and practical skills by offering hands-on learning experiences in real-time data processing, analytics tools, and cloud technologies. Whether you’re just starting or looking to enhance your existing skill set, our expert-led courses cover everything from Hadoop and Spark to data visualization, machine learning, and more.<br><br>
       Our training programs are curated by experienced data professionals and tailored to meet current market demands. We focus on practical applications, ensuring our learners are job-ready and equipped to handle large scale data challenges with confidence. Yogeo Analytics is committed to creating a strong foundation for data enthusiasts, students, and working professionals seeking to excel in the Big Data ecosystem.
     </div>
   </section>
@@ -290,10 +263,10 @@
     <div class="section-title">Why Us</div>
     <div class="section-content">
       <ul style="list-style: none; padding: 0;">
-        <li><strong>1. Learn from experts active in their field:</strong> Leading practitioners bring current best practices and real case studies into every session.</li>
-        <li><strong>2. Learn by working on real-world problems:</strong> Capstone projects using industry data sets and cloud labs ensure hands-on learning.</li>
-        <li><strong>3. Develop skills for real career growth:</strong> Our job-ready curriculum is designed with industry experts and academic leaders.</li>
-        <li><strong>4. Online Training:</strong> Learn from anywhere with flexible and live instructor-led sessions.</li>
+        <li><strong>1. Learn from experts:</strong> ...</li>
+        <li><strong>2. Real-world projects:</strong> ...</li>
+        <li><strong>3. Career skills:</strong> ...</li>
+        <li><strong>4. Online flexibility:</strong> ...</li>
       </ul>
     </div>
   </section>
@@ -301,8 +274,7 @@
   <section id="courses">
     <div class="section-title">Courses</div>
     <div class="courses-container">
-      <div class="course-card">
-        <img src="bigdata.png" alt="Big Data">
+      <img src="bigdata.png" alt="Big Data">
         <div class="course-title">Big Data</div>
       </div>
       <div class="course-card">
@@ -316,95 +288,78 @@
       <div class="course-card">
         <img src="python.png" alt="Python">
         <div class="course-title">Python</div>
+      </div><!-- Course cards here -->
+    </div>
+  </section>
+
+  <section class="contact-section" id="contact">
+    <div class="contact-info">
+      <h2 style="color: #38bdf8;">Contact</h2>
+      <div class="info-item" style="color: #e2e8f0; font-weight: bold;">
+        YOGEO ANALYTICS PRIVATE LIMITED
+      </div>
+      <div class="info-item" style="color: #e2e8f0;">
+        <i class="fas fa-map-marker-alt"></i>
+        no3 Rajeswari nagar, manavalanagar, ondikuppam, Tiruvallur, India, 602002
+      </div>
+      <div class="info-item" style="color: #e2e8f0;">
+        <i class="fas fa-envelope"></i>
+        yogeoanalytics@gmail.com
+      </div>
+      <div class="info-item" style="color: #e2e8f0;">
+        <i class="fas fa-phone"></i>
+        +91 73958 99448
+      </div>
+
+      <div class="form-wrapper">
+        <div class="section-title">Get In Touch</div>
+        <form action="https://formspree.io/f/meokzzye" method="POST" onsubmit="return validateRecaptcha();">
+          <label for="name">Name *</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email *</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="phone number">Phone Number *</label>
+          <input type="text" id="phone number" name="phone number" required />
+
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+
+          <div style="margin-top: 1rem;" class="g-recaptcha" data-sitekey="6LesCGUrAAAAAL8z1QQEIkm86887BGth92InLLcB"></div>
+          <button type="submit">Send Message</button>
+        </form>
       </div>
     </div>
   </section>
 
- <section class="contact-section">
-  <div class="contact-info">
-    <h2 style="color: #38bdf8;">Contact</h2> 
-    
- <div class="info-item" style="color: #e2e8f0; font-weight: bold;">
-      YOGEO ANALYTICS PRIVATE LIMITED
-    </div>
-    
-    <div class="info-item" style="color: #e2e8f0;">
-      <i class="fas fa-map-marker-alt"></i>
-      no3 Rajeswari nagar, manavalanagar, ondikuppam, Tiruvallur, India, 602002
-    </div>
-
-    <div class="info-item" style="color: #e2e8f0;">
-      <i class="fas fa-envelope"></i>
-      yogeoanalytics@gmail.com
-    </div>
-
-    <div class="info-item" style="color: #e2e8f0;">
-      <i class="fas fa-phone"></i>
-      +91 73958 99448
-    </div>
-  <div class="form-wrapper">
-  <div class="section-title">Get In Touch</div>
-  <form 
-    action="https://formspree.io/f/meokzzye" 
-    method="POST" 
-    onsubmit="return validateRecaptcha();"
-  >
-    <label for="name">Name *</label>
-    <input type="text" id="name" name="name" required />
-
-    <label for="email">Email *</label>
-    <input type="email" id="email" name="email" required />
-
-    <label for="phone number">phone number *</label>
-    <input type="text" id="phone number" name="phone number" required />
-
-    <label for="message">Message *</label>
-    <textarea id="message" name="message" rows="5" required></textarea>
-
-    <!-- Google reCAPTCHA -->
-    <div style="margin-top: 1rem;" class="g-recaptcha" data-sitekey="6LesCGUrAAAAAL8z1QQEIkm86887BGth92InLLcB"></div>
-
-    <button type="submit">Send Message</button>
-  </form>
-</div>
-
-<!-- reCAPTCHA Script -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
-
-<!-- reCAPTCHA Validation & Redirect -->
-<script>
-  function validateRecaptcha() {
-    const response = grecaptcha.getResponse();
-    if (response.length === 0) {
-      alert("Please verify you're not a robot.");
-      return false;
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script>
+    function validateRecaptcha() {
+      const response = grecaptcha.getResponse();
+      if (response.length === 0) {
+        alert("Please verify you're not a robot.");
+        return false;
+      }
+      setTimeout(() => {
+        window.location.href = "thankyou.html";
+      }, 1000);
+      return true;
     }
-    // Delay redirect to allow Formspree to process
-    setTimeout(() => {
-      window.location.href = "thankyou.html";
-    }, 1000);
-    return true;
-  }
-</script>
+  </script>
 
-  </section>
-</body>
   <footer style="background-color: #0c1a24; padding: 4rem 2rem;">
-  <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; color: #e2e8f0;">
-
-    <!-- Customer Service -->
-      <footer style="background-color: #0c1a24; padding: 2rem; color: #e2e8f0; text-align: center;">
-  <h2 style="color: #38bdf8;">Customer Service</h2>
-  <ul style="list-style: none; padding: 0; margin: 1rem 0;">
-    <li><a href="Terms of service.html"target="_blank" style="color: #94a3b8; text-decoration: underline;">Terms of service</a></li>
-    <li><a href="Privacy policy.html"target="_blank" style="color: #94a3b8; text-decoration: underline;">Privacy policy</a></li>
-    <li><a href="refund.html"target="_blank"style="color: #94a3b8; text-decoration: underline;">Refund & Cancellation</a></li>
-    <li><a href="services.html" target="_blank" style="color: #94a3b8; text-decoration: underline;">Services</a></li>
-    
-      </ul>
+    <div style="max-width: 1200px; margin: auto; display: flex; flex-wrap: wrap; justify-content: space-between; color: #e2e8f0;">
+      <div style="background-color: #0c1a24; padding: 2rem; color: #e2e8f0; text-align: center;">
+        <h2 style="color: #38bdf8;">Customer Service</h2>
+        <ul style="list-style: none; padding: 0; margin: 1rem 0;">
+          <li><a href="Terms of service.html" target="_blank" style="color: #94a3b8; text-decoration: underline;">Terms of service</a></li>
+          <li><a href="Privacy policy.html" target="_blank" style="color: #94a3b8; text-decoration: underline;">Privacy policy</a></li>
+          <li><a href="refund.html" target="_blank" style="color: #94a3b8; text-decoration: underline;">Refund & Cancellation</a></li>
+          <li><a href="services.html" target="_blank" style="color: #94a3b8; text-decoration: underline;">Services</a></li>
+        </ul>
+      </div>
     </div>
-
-  </div>
-</footer>
-
+  </footer>
+</body>
 </html>
